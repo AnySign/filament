@@ -52,7 +52,7 @@ highp vec3 computeViewSpaceNormalLowQ(const highp vec3 position) {
 // positionParams : invProjection[0][0] * 2, invProjection[1][1] * 2
 //
 highp vec3 computeViewSpaceNormalMediumQ(
-        const highp sampler2D depthTexture, const highp vec2 uv,
+        const mediump sampler2D depthTexture, const highp vec2 uv,
         const highp vec3 position,
         highp vec2 texel, highp vec2 positionParams) {
 
@@ -81,7 +81,7 @@ highp vec3 computeViewSpaceNormalMediumQ(
 // positionParams : invProjection[0][0] * 2, invProjection[1][1] * 2
 //
 highp vec3 computeViewSpaceNormalHighQ(
-        const highp sampler2D depthTexture, const highp vec2 uv,
+        const mediump sampler2D depthTexture, const highp vec2 uv,
         const highp float depth, const highp vec3 position,
         highp vec2 texel, highp vec2 positionParams) {
 
@@ -125,7 +125,7 @@ highp vec3 computeViewSpaceNormalHighQ(
 // positionParams : invProjection[0][0] * 2, invProjection[1][1] * 2
 //
 highp vec3 computeViewSpaceNormal(
-        const highp sampler2D depthTexture, const highp vec2 uv,
+        const mediump sampler2D depthTexture, const highp vec2 uv,
         const highp float depth, const highp vec3 position,
         highp vec2 texel, highp vec2 positionParams) {
     // todo: maybe make this a quality parameter

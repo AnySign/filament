@@ -49,3 +49,10 @@ dependencies {
     implementation project(':gltfio-android')
     implementation project(':filament-utils-android')
 }
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '7.5'
+}
+task prepareKotlinBuildScriptModel {
+
+}

@@ -67,7 +67,7 @@ highp float getViewSpaceZFromW(const highp mat4 p, const float w) {
     //return (w - p[3][3]) / p[2][3];
 }
 
-float coneTraceOcclusion(in ConeTraceSetup setup, const highp sampler2D depthTexture) {
+float coneTraceOcclusion(in ConeTraceSetup setup, const mediump sampler2D depthTexture) {
     // skip fragments that are back-facing trace direction
     // (avoid overshadowing of translucent surfaces)
     float NoL = dot(setup.vsNormal, setup.vsConeDirection);
@@ -138,7 +138,7 @@ float coneTraceOcclusion(in ConeTraceSetup setup, const highp sampler2D depthTex
 }
 
 float ssctDominantLightShadowing(highp vec2 uv, highp vec3 origin, vec3 normal,
-        const highp sampler2D depthTexture, const highp vec2 fragCoord,
+        const mediump sampler2D depthTexture, const highp vec2 fragCoord,
         vec2 rayCount, ConeTraceSetup cone) {
 
     float occlusion = 0.0;

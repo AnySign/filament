@@ -697,7 +697,7 @@ function validate_build_command {
         if [[ ! "${ninja_binary}" ]]; then
             echo "Warning: could not find ninja, using make instead"
             BUILD_GENERATOR="Unix Makefiles"
-            BUILD_COMMAND="make"
+            BUILD_COMMAND="make -j8"
         fi
     fi
     # Make sure Make is installed
@@ -789,7 +789,7 @@ while getopts ":hacCfijmp:q:uvslwtedk:b" opt; do
             ;;
         m)
             BUILD_GENERATOR="Unix Makefiles"
-            BUILD_COMMAND="make"
+            BUILD_COMMAND="make -j8"
             ;;
         p)
             ISSUE_DESKTOP_BUILD=false
