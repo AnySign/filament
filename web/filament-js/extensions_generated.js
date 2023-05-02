@@ -147,7 +147,7 @@ Filament.loadGeneratedExtensions = function() {
         const options = {
             thickness: 0.1,
             bias: 0.01,
-            maxDistance: 3.0,:
+            maxDistance: 3.0,
             stride: 2.0,
             enabled: false,
         };
